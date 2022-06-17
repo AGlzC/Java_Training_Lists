@@ -363,6 +363,42 @@ public class LinkedListTest {
     }
 
     @Test
+    void testLinkedListIndexOf1()
+    {
+        // given:
+        LinkedList linkedList = new LinkedList();
+
+        // when:
+        linkedList.add("uno");
+        linkedList.add("two");
+        linkedList.add("tri");
+        linkedList.add("for");
+        linkedList.add("Lilo");
+        int index = linkedList.indexOf("tri");
+
+        // then
+        Assertions.assertEquals(2, index);
+    }
+
+    @Test
+    void testLinkedListIndexOf2()
+    {
+        // given:
+        LinkedList linkedList = new LinkedList();
+
+        // when:
+        linkedList.add("uno");
+        linkedList.add("two");
+        linkedList.add("tri");
+        linkedList.add("for");
+        linkedList.add("Lilo");
+        int index = linkedList.indexOf("tres");
+
+        // then
+        Assertions.assertEquals(-1, index);
+    }
+
+    @Test
     void testLinkedListIterator1()
     {
         // given:

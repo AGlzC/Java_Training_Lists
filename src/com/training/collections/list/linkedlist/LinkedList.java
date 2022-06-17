@@ -130,6 +130,22 @@ public class LinkedList implements List{
         return false;
     }
 
+    @Override
+    public int indexOf(String data) {
+        int index = 0;
+        Node temporal = head;
+        while (temporal != null)
+        {
+            if (temporal.data.equals(data))
+            {
+                return index;
+            }
+            temporal = temporal.next;
+            index ++;
+        }
+        return -1;
+    }
+
     public Iterator iterator()
     {
         return new Iterator() {

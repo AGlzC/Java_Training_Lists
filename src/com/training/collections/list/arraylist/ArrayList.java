@@ -98,6 +98,19 @@ public class ArrayList implements List {
         return false;
     }
 
+    @Override
+    public int indexOf(String data)
+    {
+        for (int loop = 0; loop < currentSize; loop++)
+        {
+            if (dataArray[loop].equals(data))  // to compare objets
+            {
+                return loop;
+            }
+        }
+        return -1;
+    }
+
     public Iterator iterator()
     {
         return new Iterator() {

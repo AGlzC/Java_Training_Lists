@@ -274,7 +274,7 @@ class ArrayListTest {
         boolean flag = arrayList.contains("tri");
 
         // then
-        Assertions.assertEquals(true, flag);
+        assertTrue(flag);
     }
 
     @Test
@@ -292,7 +292,43 @@ class ArrayListTest {
         boolean flag = arrayList.contains("tres");
 
         // then
-        Assertions.assertEquals(false, flag);
+        assertFalse(flag);
+    }
+
+    @Test
+    void testArrayListIndexOf1()
+    {
+        // given:
+        ArrayList arrayList = new ArrayList();
+
+        // when:
+        arrayList.add("uno");
+        arrayList.add("two");
+        arrayList.add("tri");
+        arrayList.add("for");
+        arrayList.add("Lilo");
+        int index = arrayList.indexOf("tri");
+
+        // then
+        Assertions.assertEquals(2, index);
+    }
+
+    @Test
+    void testArrayListIndexOf2()
+    {
+        // given:
+        ArrayList arrayList = new ArrayList();
+
+        // when:
+        arrayList.add("uno");
+        arrayList.add("two");
+        arrayList.add("tri");
+        arrayList.add("for");
+        arrayList.add("Lilo");
+        int index = arrayList.indexOf("tres");
+
+        // then
+        Assertions.assertEquals(-1, index);
     }
 
     @Test
@@ -311,7 +347,7 @@ class ArrayListTest {
         boolean flag = iterator.hasNext();
 
         // then
-        Assertions.assertEquals(true, flag);
+        assertTrue(flag);
     }
 
     @Test
@@ -325,7 +361,7 @@ class ArrayListTest {
         boolean flag = iterator.hasNext();
 
         // then
-        Assertions.assertEquals(false, flag);
+        assertFalse(flag);
     }
 
     @Test

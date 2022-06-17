@@ -19,6 +19,8 @@ public interface List {
 
     boolean contains(String data);
 
+    int indexOf(String data);
+
     Iterator iterator();
 
 }
